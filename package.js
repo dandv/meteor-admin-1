@@ -21,6 +21,7 @@ Package.on_use(function(api){
     'aldeed:collection2@2.2.0',
     // 'aldeed:autoform@2.0.2 || 3.1.0',
     'aldeed:autoform@4.0.0-rc8',
+    'aldeed:simple-schema@1.0.3',
     'alanning:roles@1.2.13',
     'raix:handlebar-helpers@0.1.2'
     ],

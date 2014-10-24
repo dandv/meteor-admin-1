@@ -21,7 +21,9 @@ Meteor.publish 'adminAllCollections', ->
 		if typeof AdminConfig != 'undefined'  and typeof AdminConfig.collections == 'object'
 			subscriptions = []
 			_.map AdminConfig.collections, (obj, key)->
+				console.log(key, obj)
 				subscriptions.push global[key].find()
+				console.log("pub ok", key)
 			subscriptions
 	else
 		@ready()
