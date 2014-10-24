@@ -14,11 +14,11 @@
     ],
     [
       "aldeed:autoform",
-      "4.0.0-rc6"
+      "4.0.0-rc8"
     ],
     [
       "aldeed:collection2",
-      "2.1.0"
+      "2.2.0"
     ],
     [
       "aldeed:simple-schema",

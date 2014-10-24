@@ -1,5 +1,5 @@
 Package.describe({
-  name: "yogiben:admin",
+  name: "dcsan:yogiben-admin",
   summary: "A complete admin dashboard solution",
   version: "0.9.6",
   git: "https://github.com/dcsan/meteor-admin"
@@ -12,14 +12,15 @@ Package.on_use(function(api){
   api.versionsFrom('METEOR@0.9.3');
 
   api.use(
-    ['iron:router@0.9.3',
+    [
+    'iron:router@0.9.3',
     'coffeescript',
     'accounts-base',
     'accounts-password',
     'underscore',
-    'aldeed:collection2@2.1.0',
+    'aldeed:collection2@2.2.0',
     // 'aldeed:autoform@2.0.2 || 3.1.0',
-    'aldeed:autoform@4.0.0-rc6',
+    'aldeed:autoform@4.0.0-rc8',
     'alanning:roles@1.2.13',
     'raix:handlebar-helpers@0.1.2'
     ],
