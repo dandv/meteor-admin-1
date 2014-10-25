@@ -1,3 +1,6 @@
+Router.onBeforeAction AdminDashboard.checkAdmin, {only: AdminDashboard.adminRoutes}
+Router.onBeforeAction AdminDashboard.clearAlerts, {only: AdminDashboard.adminRoutes}
+
 Router.map -> 
   @route "adminDashboard",
     path: "/admin"
@@ -104,5 +107,3 @@ Router.map ->
     # onBeforeAction: ->
       # AccountsEntry.signInRequired this
 
-Router.onBeforeAction AdminDashboard.checkAdmin, {only: AdminDashboard.adminRoutes}
-Router.onBeforeAction AdminDashboard.clearAlerts, {only: AdminDashboard.adminRoutes}

@@ -126,7 +126,7 @@
     ],
     [
       "less",
-      "1.0.11-rc.4"
+      "1.0.11-rc.5"
     ],
     [
       "livedata",
@@ -146,7 +146,7 @@
     ],
     [
       "minifiers",
-      "1.1.2-rc.1"
+      "1.1.2-rc.2"
     ],
     [
       "minimongo",
@@ -226,7 +226,7 @@
     ],
     [
       "templating",
-      "1.0.9-rc.1"
+      "1.0.9-rc.2"
     ],
     [
       "tracker",
@@ -250,6 +250,6 @@
     ]
   ],
   "pluginDependencies": [],
-  "toolVersion": "meteor-tool@1.0.35-rc.9",
+  "toolVersion": "meteor-tool@1.0.35-rc.11",
   "format": "1.0"
 }

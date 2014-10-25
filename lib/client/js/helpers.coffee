@@ -4,11 +4,18 @@ UI.registerHelper 'AdminConfig', ->
 UI.registerHelper 'admin_collections', ->
 	if typeof AdminConfig != 'undefined'  and typeof AdminConfig.collections == 'object'
 		_.map AdminConfig.collections, (obj, key)->
-			obj = _.extend obj, {name:key}
-			obj = _.defaults obj, {label: key,icon:'plus',color:'blue'}
+			console.log("check collection", obj, key)
+			try
+  			obj = _.extend obj, {name:key}
+  			obj = _.defaults obj, {label: key,icon:'plus',color:'blue'}
+  		catch e
+        console.error("admin collection problem:", obj, key)
+
 
 UI.registerHelper 'admin_collection', ->
-	Session.get 'admin_collection'
+	c = Session.get 'admin_collection'
+	console.log('collection', c)
+	c
 
 UI.registerHelper 'admin_current_id', ->
 	Session.get 'admin_id'
@@ -78,7 +85,11 @@ UI.registerHelper 'adminCollectionCount', (collection)->
 	if collection == 'Users'
 		Meteor.users.find().fetch().length
 	else
-		window[collection].find().fetch().length
+		try
+			window[collection].find().fetch().length
+		catch e
+			console.error("Admin: problem with collection:", collection)
+		
 
 UI.registerHelper 'adminTemplate', (collection,mode)->
 	if collection.toLowerCase() != 'users' && typeof AdminConfig.collections[collection].templates != 'undefined'
