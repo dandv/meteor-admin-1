@@ -11,8 +11,7 @@ Package.on_use(function(api){
 
   api.versionsFrom('METEOR@0.9.3');
 
-  api.use(
-    [
+  api.use([
     'iron:router@0.9.3',
     'coffeescript',
     'accounts-base',
@@ -20,12 +19,14 @@ Package.on_use(function(api){
     'underscore',
     'aldeed:collection2@2.2.0',
     // 'aldeed:autoform@2.0.2 || 3.1.0',
+    // 'aldeed:autoform@3.2.0',
     'aldeed:autoform@4.0.0-rc8',
     'aldeed:simple-schema@1.0.3',
     'alanning:roles@1.2.13',
+    'aldeed:template-extension@2.0.0',
     'raix:handlebar-helpers@0.1.2'
-    ],
-    both);
+  ],
+  both);
 
   api.use(['less','session','jquery','templating'],'client')
 
@@ -50,7 +51,7 @@ Package.on_use(function(api){
     'lib/client/js/slim_scroll.js',
     'lib/client/js/datatable.js',
     'lib/client/js/autoForm.coffee',
-    ], 'client');
+  ], 'client');
 
   api.add_files([
     'lib/server/publish.coffee',
