@@ -1,7 +1,7 @@
 Package.describe({
   name: "dcsan:yogiben-admin",
   summary: "A complete admin dashboard solution",
-  version: "0.9.6",
+  version: "0.9.7",
   git: "https://github.com/dcsan/meteor-admin"
 });
 
@@ -9,7 +9,7 @@ Package.on_use(function(api){
 
   both = ['client','server']
 
-  api.versionsFrom('METEOR@0.9.3');
+  api.versionsFrom('METEOR@1.0');
 
   api.use([
     'iron:router@0.9.3',
@@ -17,13 +17,14 @@ Package.on_use(function(api){
     'accounts-base',
     'accounts-password',
     'underscore',
-    'aldeed:collection2@2.2.0',
+    'aldeed:autoform@4.0.0-rc6',
+    'aldeed:collection2',
     // 'aldeed:autoform@2.0.2 || 3.1.0',
     // 'aldeed:autoform@3.2.0',
-    'aldeed:autoform@4.0.0-rc8',
-    'aldeed:simple-schema@1.0.3',
+    // 'aldeed:autoform@4.0.0-rc9',
+    'aldeed:simple-schema',
     'alanning:roles@1.2.13',
-    'aldeed:template-extension@2.0.0',
+    'aldeed:template-extension',
     'raix:handlebar-helpers@0.1.2'
   ],
   both);
@@ -36,7 +37,7 @@ Package.on_use(function(api){
     'lib/both/AdminDashboard.coffee',
     'lib/both/router.coffee'
     ], both);
-  
+
   api.add_files([
     'lib/client/html/admin_templates.html',
     'lib/client/html/admin_widgets.html',

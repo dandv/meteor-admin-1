@@ -110,6 +110,7 @@
 
 		<thead>
 			<tr>
+        <th>_id</th>
 				<th>Admin</th>
 				<th>Email</th>
 				<th>Mail</th>
@@ -122,6 +123,7 @@
 		<tbody>
 			{{#each users}}
 			<tr>
+        <td>{{this._id}}</td>
 				<td>{{#if adminIsUserInRole this._id 'admin'}}<i class="fa fa-check"></i>{{/if}}</td>
 				<td>{{adminUserEmail this}}</td>
 				<td><a href="mailto:{{adminUserEmail this}}" class="btn btn-default btn-xs"><i class="fa fa-envelope"></i></a></td>
